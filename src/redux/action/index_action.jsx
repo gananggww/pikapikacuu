@@ -1,18 +1,20 @@
 import axios from 'axios'
 
-export const actionPika = (payload) => {
+export const actionAllChar = (payload) => {
   return {
-    type: 'GET_PIKA',
+    type: 'GET_ALL_CHAR',
     payload
   }
 }
 
 
-export const getPika = () => {
+export const getAllChar = () => {
   return (dispatch, getState) => {
-    const url = ""
+    const url = `https://ghibliapi.herokuapp.com/films`
     axios.get(url)
     .then(resp => {
-      dispatch(actionPika([]))
+      console.log(resp);
+      dispatch(actionAllChar(actionAllChar))
+    }).catch(err => console.log(err))
   }
 }

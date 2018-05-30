@@ -1,14 +1,14 @@
 const defaultState = {
-  allpika: [],
+  allChar: [],
 }
 
-const pikaReducer = (state=defaultState, action) => {
+const charReducer = (state=defaultState, action) => {
   switch (action.type) {
-    case 'GET_PIKA':
-      return {...state, allpika: action.payload}
+    case 'GET_ALL_CHAR':
+      return {...state, allChar: action.payload}
     default:
     return state
   }
 }
 
-export default pikaReducer
+export default charReducer
