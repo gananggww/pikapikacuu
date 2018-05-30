@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux'
+
 import '../../App.css';
 
 
@@ -12,4 +14,6 @@ class Content extends Component {
   }
 }
 
-export default Content;
+
+const Conn = connect(null, null)(Content)
+export default Conn;

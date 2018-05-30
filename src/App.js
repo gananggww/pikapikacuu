@@ -1,15 +1,22 @@
 import React, { Component } from 'react';
-import './App.css';
+import { Provider } from 'react-redux'
 
 import Main from './components/main.jsx';
+import store from './redux/store/index_store.jsx'
+
+import './App.css';
+
+
 
 
 class App extends Component {
   render() {
     return (
-      <div>
-        <Main />
-      </div>
+      <Provider store={store}>
+        <div>
+          <Main />
+        </div>
+      </Provider>
     );
   }
 }

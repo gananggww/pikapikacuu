@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux'
+
 import '../../App.css';
 
 
@@ -12,4 +14,5 @@ class Header extends Component {
   }
 }
 
-export default Header;
+const Conn = connect(null, null)(Header)
+export default Conn;

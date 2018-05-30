@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux'
 import '../App.css';
 
 import Content from './content/content.jsx';
@@ -16,4 +17,6 @@ class Main extends Component {
   }
 }
 
-export default Main;
+
+const Conn = connect(null, null)(Main)
+export default Conn;
