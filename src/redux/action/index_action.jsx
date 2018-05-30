@@ -14,7 +14,7 @@ export const getAllChar = () => {
     axios.get(url)
     .then(resp => {
       console.log(resp);
-      dispatch(actionAllChar(actionAllChar))
+      dispatch(actionAllChar(resp))
     }).catch(err => console.log(err))
   }
 }
